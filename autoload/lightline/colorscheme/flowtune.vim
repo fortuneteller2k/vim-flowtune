@@ -9,7 +9,7 @@ let s:yellow = [ '#fcd148', 150 ]
 let s:salmon = [ '#ec456b', 209 ]
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
-let s:p.normal.left = [ [ s:gray1, s:salmon ], [ s:red, s:gray2 ] ]
+let s:p.normal.left = [ [ s:gray1, s:salmon ], [ s:white, s:gray2 ] ]
 let s:p.normal.right = [ [ s:gray1, s:salmon ], [ s:gray1, s:yellow ] ]
 let s:p.inactive.right = [ [ s:gray1, s:gray2 ], [ s:white, s:gray1 ] ]
 let s:p.inactive.left =  [ [ s:cyan, s:gray1 ], [ s:white, s:gray1 ] ]
