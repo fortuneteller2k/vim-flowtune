@@ -25,7 +25,7 @@ hi! ColorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#132943
 hi! CursorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#132943
 hi! CursorLine cterm=NONE gui=NONE ctermbg=235 guibg=#132943
 hi! Comment cterm=italic gui=italic ctermfg=242 guifg=#6c6f93
-hi! Constant cterm=NONE gui=NONE ctermfg=209 guifg=#f09483
+hi! Constant cterm=NONE gui=NONE ctermfg=209 guifg=#e97b16
 hi! Cursor cterm=NONE gui=NONE ctermbg=242 ctermfg=242 guibg=#6c6f93 guifg=#6c6f93
 hi! CursorLineNr cterm=NONE gui=NONE ctermbg=235 ctermfg=251 guibg=#2a3158 guifg=#cdd1e6
 hi! Delimiter cterm=NONE gui=NONE ctermfg=44 guifg=#48a0fc
@@ -64,7 +64,7 @@ hi! Special cterm=NONE gui=NONE ctermfg=203 guifg=#e95678
 hi! SpellBad cterm=undercurl gui=undercurl ctermbg=95 ctermfg=252 guisp=#ec456b
 hi! SpellCap cterm=undercurl gui=undercurl ctermbg=24 ctermfg=252 guisp=#2f93fc
 hi! SpellLocal cterm=undercurl gui=undercurl ctermbg=23 ctermfg=203 guisp=#e95678
-hi! SpellRare cterm=undercurl gui=undercurl ctermbg=97 ctermfg=252 guisp=#f09483
+hi! SpellRare cterm=undercurl gui=undercurl ctermbg=97 ctermfg=252 guisp=#e97b16
 hi! StatusLine cterm=reverse gui=reverse ctermbg=234 ctermfg=245 guibg=#17171b guifg=#818596
 hi! StatusLineTerm cterm=reverse gui=reverse ctermbg=234 ctermfg=245 guibg=#17171b guifg=#818596
 hi! StatusLineNC cterm=reverse gui=reverse ctermbg=237 ctermfg=233 guibg=#3e445e guifg=#0f1117
@@ -97,7 +97,7 @@ hi! GitGutterAdd cterm=NONE gui=NONE ctermbg=233 ctermfg=48 guibg=#060d16 guifg=
 hi! GitGutterChange cterm=NONE gui=NONE ctermbg=233 ctermfg=109 guibg=#060d16 guifg=#e95678
 hi! GitGutterChangeDelete cterm=NONE gui=NONE ctermbg=233 ctermfg=109 guibg=#060d16 guifg=#e95678
 hi! GitGutterDelete cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
-hi! Sneak cterm=NONE gui=NONE ctermbg=140 ctermfg=234 guibg=#f09483 guifg=#e95678
+hi! Sneak cterm=NONE gui=NONE ctermbg=140 ctermfg=234 guibg=#e97b16 guifg=#e95678
 hi! SneakScope cterm=NONE gui=NONE ctermbg=236 ctermfg=242 guibg=#272c42 guifg=#f1f6fb
 hi! SyntasticErrorSign cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
 hi! SyntasticStyleErrorSign cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
@@ -210,7 +210,7 @@ if has('nvim')
   let g:terminal_color_2 = '#3cef85'
   let g:terminal_color_3 = '#fcd148'
   let g:terminal_color_4 = '#2f93fc'
-  let g:terminal_color_5 = '#f09483'
+  let g:terminal_color_5 = '#e97b16'
   let g:terminal_color_6 = '#e95678'
   let g:terminal_color_7 = '#060d16'
   let g:terminal_color_8 = '#f1f6fb'
@@ -221,7 +221,7 @@ if has('nvim')
   let g:terminal_color_13 = '#95c4ce'
   let g:terminal_color_14 = '#f6f9fd'
 else
-  let g:terminal_ansi_colors = ['#060d16', '#ec456b', '#3cef85', '#fcd148', '#2f93fc', '#f09483', '#e95678', '#060d16', '#f1f6fb', '#40c9f2', '#fcd761', '#48a0fc', '#e454f1', '#95c4ce', '#f6f9fd']
+  let g:terminal_ansi_colors = ['#060d16', '#ec456b', '#3cef85', '#fcd148', '#2f93fc', '#e97b16', '#e95678', '#060d16', '#f1f6fb', '#40c9f2', '#fcd761', '#48a0fc', '#e454f1', '#95c4ce', '#f6f9fd']
 endif
 
 if exists("g:flowtune_transparent_bg")
