@@ -1,151 +1,234 @@
-" Vim color file
-" flowtune
-" Created by fortuneteller2k with ThemeCreator (https://github.com/mswift42/themecreator)
+" Name:         Flowtune
+" Description:  fortuneteller2k's colorscheme
+" Author:       fortuneteller2k <lythe1107@gmail.com>
+" Maintainer:   fortuneteller2k e<lythe1107@gmail.com>
+" Website:      https://github.com/fortuneteller2k/vim-flowtune
+" License:      Vim License (see `:help license`)
+" Last Updated: Tuesday March \30 14:37:00 2021
 
-hi clear
-
-if exists("syntax on")
-syntax reset
+if !(has('termguicolors') && &termguicolors) && !has('gui_running')
+      \ && (!exists('&t_Co') || &t_Co < 256)
+  echoerr '[flowtune] There are not enough colors.'
+  finish
 endif
 
-set t_Co=256
-let g:colors_name = "flowtune"
+set background=dark
 
+hi clear
+if exists('syntax_on')
+  syntax reset
+endif
 
-" Define reusable colorvariables.
-let s:bg="#060d16"
-let s:fg="#e2ecf7"
-let s:fg2="#d0d9e3"
-let s:fg3="#bec6cf"
-let s:fg4="#acb3bc"
-let s:bg2="#1a2029"
-let s:bg3="#2e343b"
-let s:bg4="#42474e"
-let s:keyword="#e03cef"
-let s:builtin="#54f194"
-let s:const= "#fcd761"
-let s:comment="#808080"
-let s:func="#3cdf85"
-let s:str="#fcd961"
-let s:type="#2f93fc"
-let s:var="#f6f9fd"
-let s:warning="#ea2e58"
-let s:warning2="#fcd148"
+let g:colors_name = 'flowtune'
 
-exe 'hi Normal guifg='s:fg' guibg='s:bg
-exe 'hi Cursor guifg='s:bg' guibg='s:fg
-exe 'hi CursorLine  guibg='s:bg2
-exe 'hi CursorLineNr guifg='s:str' guibg='s:bg
-exe 'hi CursorColumn  guibg='s:bg2
-exe 'hi ColorColumn  guibg='s:bg2
-exe 'hi LineNr guifg='s:fg2' guibg='s:bg
-exe 'hi VertSplit guifg='s:fg3' guibg='s:bg3
-exe 'hi MatchParen guifg='s:warning2'  gui=underline'
-exe 'hi StatusLine guifg='s:fg2' guibg='s:bg3' gui=bold'
-exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
-exe 'hi PmenuSel  guibg='s:bg3
-exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
-exe 'hi Search   gui=underline'
-exe 'hi Directory guifg='s:const
-exe 'hi Folded guifg='s:fg4' guibg='s:bg
-exe 'hi WildMenu guifg='s:str' guibg='s:bg
+hi! ColorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#132943
+hi! CursorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#132943
+hi! CursorLine cterm=NONE gui=NONE ctermbg=235 guibg=#132943
+hi! Comment cterm=italic gui=italic ctermfg=242 guifg=#6c6f93
+hi! Constant cterm=NONE gui=NONE ctermfg=209 guifg=#f09483
+hi! Cursor cterm=NONE gui=NONE ctermbg=242 ctermfg=242 guibg=#6c6f93 guifg=#6c6f93
+hi! CursorLineNr cterm=NONE gui=NONE ctermbg=235 ctermfg=251 guibg=#2a3158 guifg=#cdd1e6
+hi! Delimiter cterm=NONE gui=NONE ctermfg=44 guifg=#48a0fc
+hi! DiffAdd cterm=NONE gui=NONE ctermbg=238 ctermfg=7 guibg=#45493e guifg=#c0c5b9
+hi! DiffChange cterm=NONE gui=NONE ctermbg=23 ctermfg=241 guibg=#384851 guifg=#b3c3cc
+hi! DiffDelete cterm=NONE gui=NONE ctermbg=52 ctermfg=167 guibg=#53343b guifg=#ceb0b6
+hi! DiffText cterm=NONE gui=NONE ctermbg=24 ctermfg=233 guibg=#5b7881 guifg=#060d16
+hi! Directory cterm=NONE gui=NONE ctermfg=203 guifg=#e95678
+hi! Error cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! ErrorMsg cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! WarningMsg cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! EndOfBuffer cterm=NONE gui=NONE ctermbg=233 ctermfg=236 guibg=#060d16 guifg=#132943
+hi! NonText cterm=NONE gui=NONE ctermbg=233 ctermfg=233 guifg=#132943 guibg=#060d16
+hi! SpecialKey cterm=NONE gui=NONE ctermbg=203 ctermfg=235 guibg=#e95678 guifg=#132943
+hi! Folded cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#060d16 guifg=#6c6f93
+hi! FoldColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#060d16 guifg=#6c6f93
+hi! Function cterm=NONE gui=NONE ctermfg=37 guifg=#2f93fc
+hi! Identifier cterm=italic gui=italic ctermfg=203 guifg=#e95678
+hi! Statement cterm=bold gui=bold ctermfg=171 guifg=#e454f1
+hi! Include cterm=NONE gui=NONE ctermfg=171 guifg=#e454f1
+hi! LineNr cterm=NONE gui=NONE ctermbg=233 ctermfg=239 guibg=#060d16 guifg=#6c6f93
+hi! MatchParen cterm=NONE gui=NONE ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
+hi! MoreMsg cterm=NONE gui=NONE ctermfg=48 guifg=#3cef85
+hi! Normal cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guibg=#060d16 guifg=#f1f6fb
+hi! Operator cterm=NONE gui=NONE ctermfg=37 guifg=#2f93fc
+hi! Pmenu cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guifg=#060d16 guibg=#f1f6fb
+hi! PmenuSbar cterm=NONE gui=NONE ctermbg=236 guibg=#3d425b
+hi! PmenuSel cterm=NONE gui=NONE ctermbg=240 ctermfg=255 guibg=#5b6389 guifg=#eff0f4
+hi! PmenuThumb cterm=NONE gui=NONE ctermbg=233 guibg=#060d16
+hi! PreProc cterm=NONE gui=NONE ctermfg=150 guifg=#3cef85
+hi! Question cterm=NONE gui=NONE ctermfg=150 guifg=#3cef85
+hi! QuickFixLine cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guibg=#272c42 guifg=#060d16
+hi! Search cterm=NONE gui=NONE ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
+hi! SignColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#060d16 guifg=#6c6f93
+hi! Special cterm=NONE gui=NONE ctermfg=203 guifg=#e95678
+hi! SpellBad cterm=undercurl gui=undercurl ctermbg=95 ctermfg=252 guisp=#ec456b
+hi! SpellCap cterm=undercurl gui=undercurl ctermbg=24 ctermfg=252 guisp=#2f93fc
+hi! SpellLocal cterm=undercurl gui=undercurl ctermbg=23 ctermfg=203 guisp=#e95678
+hi! SpellRare cterm=undercurl gui=undercurl ctermbg=97 ctermfg=252 guisp=#f09483
+hi! StatusLine cterm=reverse gui=reverse ctermbg=234 ctermfg=245 guibg=#17171b guifg=#818596
+hi! StatusLineTerm cterm=reverse gui=reverse ctermbg=234 ctermfg=245 guibg=#17171b guifg=#818596
+hi! StatusLineNC cterm=reverse gui=reverse ctermbg=237 ctermfg=233 guibg=#3e445e guifg=#0f1117
+hi! StatusLineTermNC cterm=reverse gui=reverse ctermbg=237 ctermfg=233 guibg=#3e445e guifg=#0f1117
+hi! StorageClass cterm=italic gui=italic ctermfg=37 guifg=#2f93fc
+hi! String cterm=NONE gui=NONE ctermfg=209 guifg=#fcd148
+hi! Structure cterm=NONE gui=NONE ctermfg=37 guifg=#2f93fc
+hi! TabLine cterm=NONE gui=NONE ctermbg=245 ctermfg=234 guibg=#818596 guifg=#17171b
+hi! TabLineFill cterm=reverse gui=reverse ctermbg=234 ctermfg=245 guibg=#17171b guifg=#818596
+hi! TabLineSel cterm=NONE gui=NONE ctermbg=234 ctermfg=247 guibg=#e95678 guifg=#9a9ca5
+hi! Title cterm=bold gui=bold ctermfg=37 guifg=#2f93fc
+hi! Todo cterm=inverse,bold gui=inverse,bold ctermbg=59 ctermfg=48 guibg=#45493e guifg=#3cef85
+hi! Type cterm=NONE gui=NONE ctermfg=209 guifg=#fcd148
+hi! Underlined cterm=underline gui=underline ctermfg=37 guifg=#2f93fc
+hi! VertSplit cterm=bold gui=bold ctermbg=233 ctermfg=233 guibg=#0f1117 guifg=#0f1117
+hi! Visual cterm=NONE gui=NONE ctermbg=236 guibg=#272c42
+hi! WildMenu cterm=NONE gui=NONE ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
+hi! diffAdded cterm=NONE gui=NONE ctermfg=48 guifg=#3cef85
+hi! diffRemoved cterm=NONE gui=NONE ctermfg=203 guifg=#ec456b
+hi! ALEErrorSign cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! ALEWarningSign cterm=NONE gui=NONE ctermbg=233 ctermfg=209 guibg=#060d16 guifg=#fcd148
+hi! ALEVirtualTextError cterm=NONE gui=NONE ctermfg=203 guifg=#ec456b
+hi! ALEVirtualTextWarning cterm=NONE gui=NONE ctermfg=209 guifg=#fcd148
+hi! CtrlPMode1 cterm=NONE gui=NONE ctermbg=241 ctermfg=234 guibg=#5a5f72 guifg=#17171b
+hi! EasyMotionShade cterm=NONE gui=NONE ctermfg=239 guifg=#3d425b
+hi! EasyMotionTarget cterm=NONE gui=NONE ctermfg=48 guifg=#3cef85
+hi! EasyMotionTarget2First cterm=NONE gui=NONE ctermfg=209 guifg=#fcd148
+hi! EasyMotionTarget2Second cterm=NONE gui=NONE ctermfg=209 guifg=#fcd148
+hi! GitGutterAdd cterm=NONE gui=NONE ctermbg=233 ctermfg=48 guibg=#060d16 guifg=#3cef85
+hi! GitGutterChange cterm=NONE gui=NONE ctermbg=233 ctermfg=109 guibg=#060d16 guifg=#e95678
+hi! GitGutterChangeDelete cterm=NONE gui=NONE ctermbg=233 ctermfg=109 guibg=#060d16 guifg=#e95678
+hi! GitGutterDelete cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! Sneak cterm=NONE gui=NONE ctermbg=140 ctermfg=234 guibg=#f09483 guifg=#e95678
+hi! SneakScope cterm=NONE gui=NONE ctermbg=236 ctermfg=242 guibg=#272c42 guifg=#f1f6fb
+hi! SyntasticErrorSign cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! SyntasticStyleErrorSign cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#060d16 guifg=#ec456b
+hi! SyntasticStyleWarningSign cterm=NONE gui=NONE ctermbg=233 ctermfg=209 guibg=#060d16 guifg=#fcd148
+hi! SyntasticWarningSign cterm=NONE gui=NONE ctermbg=233 ctermfg=209 guibg=#060d16 guifg=#fcd148
+hi! ZenSpace cterm=NONE gui=NONE ctermbg=203 guibg=#ec456b
 
-exe 'hi Boolean guifg='s:const
-exe 'hi Character guifg='s:const
-exe 'hi Comment guifg='s:comment
-exe 'hi Conditional guifg='s:keyword
-exe 'hi Constant guifg='s:const
-exe 'hi Todo guibg='s:bg
-exe 'hi Define guifg='s:keyword
-exe 'hi DiffAdd guifg=#fafafa guibg=#123d0f gui=bold'
-exe 'hi DiffDelete guibg='s:bg2
-exe 'hi DiffChange  guibg=#151b3c guifg=#fafafa'
-exe 'hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold'
-exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
-exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
-exe 'hi Float guifg='s:const
-exe 'hi Function guifg='s:func
-exe 'hi Identifier guifg='s:type'  gui=italic'
-exe 'hi Keyword guifg='s:keyword'  gui=bold'
-exe 'hi Label guifg='s:var
-exe 'hi NonText guifg='s:bg4' guibg='s:bg2
-exe 'hi Number guifg='s:const
-exe 'hi Operator guifg='s:keyword
-exe 'hi PreProc guifg='s:keyword
-exe 'hi Special guifg='s:fg
-exe 'hi SpecialKey guifg='s:fg2' guibg='s:bg2
-exe 'hi Statement guifg='s:keyword
-exe 'hi StorageClass guifg='s:type'  gui=italic'
-exe 'hi String guifg='s:str
-exe 'hi Tag guifg='s:keyword
-exe 'hi Title guifg='s:fg'  gui=bold'
-exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
-exe 'hi Type guifg='s:type
-exe 'hi Underlined   gui=underline'
+hi! link cssBraces Delimiter
+hi! link cssClassName Special
+hi! link cssClassNameDot Normal
+hi! link cssPseudoClassId Special
+hi! link cssTagName Statement
+hi! link helpHyperTextJump Constant
+hi! link htmlArg Constant
+hi! link htmlEndTag Statement
+hi! link htmlTag Statement
+hi! link jsonQuote Normal
+hi! link phpVarSelector Identifier
+hi! link pythonFunction Title
+hi! link rubyDefine Statement
+hi! link rubyFunction Title
+hi! link rubyInterpolationDelimiter String
+hi! link rubySharpBang Comment
+hi! link rubyStringDelimiter String
+hi! link sassClass Special
+hi! link shFunction Normal
+hi! link vimContinue Comment
+hi! link vimFuncSID vimFunction
+hi! link vimFuncVar Normal
+hi! link vimFunction Title
+hi! link vimGroup Statement
+hi! link vimHiGroup Statement
+hi! link vimHiTerm Identifier
+hi! link vimMapModKey Special
+hi! link vimOption Identifier
+hi! link vimVar Normal
+hi! link xmlAttrib Constant
+hi! link xmlAttribPunct Statement
+hi! link xmlEndTag Statement
+hi! link xmlNamespace Statement
+hi! link xmlTag Statement
+hi! link xmlTagName Statement
+hi! link yamlKeyValueDelimiter Delimiter
+hi! link CtrlPPrtCursor Cursor
+hi! link CtrlPMatch Title
+hi! link CtrlPMode2 StatusLine
+hi! link deniteMatched Normal
+hi! link deniteMatchedChar Title
+hi! link jsFlowMaybe Normal
+hi! link jsFlowObject Normal
+hi! link jsFlowType PreProc
+hi! link graphqlName Normal
+hi! link graphqlOperator Normal
+hi! link jsArrowFunction Operator
+hi! link jsClassDefinition Normal
+hi! link jsClassFuncName Title
+hi! link jsExport Statement
+hi! link jsFuncName Title
+hi! link jsFutureKeys Statement
+hi! link jsFuncCall Normal
+hi! link jsGlobalObjects Statement
+hi! link jsModuleKeywords Statement
+hi! link jsModuleOperators Statement
+hi! link jsNull Constant
+hi! link jsObjectFuncName Title
+hi! link jsObjectKey Identifier
+hi! link jsSuper Statement
+hi! link jsTemplateBraces Special
+hi! link jsUndefined Constant
+hi! link markdownBold Special
+hi! link markdownCode String
+hi! link markdownCodeDelimiter String
+hi! link markdownHeadingDelimiter Comment
+hi! link markdownRule Comment
+hi! link ngxDirective Statement
+hi! link plug1 Normal
+hi! link plug2 Identifier
+hi! link plugDash Comment
+hi! link plugMessage Special
+hi! link SignifySignAdd GitGutterAdd
+hi! link SignifySignChange GitGutterChange
+hi! link SignifySignChangeDelete GitGutterChangeDelete
+hi! link SignifySignDelete GitGutterDelete
+hi! link SignifySignDeleteFirstLine SignifySignDelete
+hi! link StartifyBracket Comment
+hi! link StartifyFile Identifier
+hi! link StartifyFooter Constant
+hi! link StartifyHeader Constant
+hi! link StartifyNumber Special
+hi! link StartifyPath Comment
+hi! link StartifySection Statement
+hi! link StartifySlash Comment
+hi! link StartifySpecial Normal
+hi! link svssBraces Delimiter
+hi! link swiftIdentifier Normal
+hi! link typescriptAjaxMethods Normal
+hi! link typescriptBraces Normal
+hi! link typescriptEndColons Normal
+hi! link typescriptFuncKeyword Statement
+hi! link typescriptGlobalObjects Statement
+hi! link typescriptHtmlElemProperties Normal
+hi! link typescriptIdentifier Statement
+hi! link typescriptMessage Normal
+hi! link typescriptNull Constant
+hi! link typescriptParens Normal
 
-" Neovim Terminal Mode
-let g:terminal_color_0 = s:bg
-let g:terminal_color_1 = s:warning
-let g:terminal_color_2 = s:keyword
-let g:terminal_color_3 = s:bg4
-let g:terminal_color_4 = s:func
-let g:terminal_color_5 = s:builtin
-let g:terminal_color_6 = s:fg3
-let g:terminal_color_7 = s:str
-let g:terminal_color_8 = s:bg2
-let g:terminal_color_9 = s:warning2
-let g:terminal_color_10 = s:fg2
-let g:terminal_color_11 = s:var
-let g:terminal_color_12 = s:type
-let g:terminal_color_13 = s:const
-let g:terminal_color_14 = s:fg4
-let g:terminal_color_15 = s:comment
+if has('nvim')
+  let g:terminal_color_0 = '#060d16'
+  let g:terminal_color_1 = '#ec456b'
+  let g:terminal_color_2 = '#3cef85'
+  let g:terminal_color_3 = '#fcd148'
+  let g:terminal_color_4 = '#2f93fc'
+  let g:terminal_color_5 = '#f09483'
+  let g:terminal_color_6 = '#e95678'
+  let g:terminal_color_7 = '#060d16'
+  let g:terminal_color_8 = '#f1f6fb'
+  let g:terminal_color_9 = '#40c9f2'
+  let g:terminal_color_10 = '#fcd761'
+  let g:terminal_color_11 = '#48a0fc'
+  let g:terminal_color_12 = '#e454f1'
+  let g:terminal_color_13 = '#95c4ce'
+  let g:terminal_color_14 = '#f6f9fd'
+else
+  let g:terminal_ansi_colors = ['#060d16', '#ec456b', '#3cef85', '#fcd148', '#2f93fc', '#f09483', '#e95678', '#060d16', '#f1f6fb', '#40c9f2', '#fcd761', '#48a0fc', '#e454f1', '#95c4ce', '#f6f9fd']
+endif
 
-" Ruby Highlighting
-exe 'hi rubyAttribute guifg='s:builtin
-exe 'hi rubyLocalVariableOrMethod guifg='s:var
-exe 'hi rubyGlobalVariable guifg='s:var' gui=italic'
-exe 'hi rubyInstanceVariable guifg='s:var
-exe 'hi rubyKeyword guifg='s:keyword
-exe 'hi rubyKeywordAsMethod guifg='s:keyword' gui=bold'
-exe 'hi rubyClassDeclaration guifg='s:keyword' gui=bold'
-exe 'hi rubyClass guifg='s:keyword' gui=bold'
-exe 'hi rubyNumber guifg='s:const
-
-" Python Highlighting
-exe 'hi pythonBuiltinFunc guifg='s:builtin
-
-" Go Highlighting
-exe 'hi goBuiltins guifg='s:builtin
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_build_constraints      = 1
-let g:go_highlight_chan_whitespace_error  = 1
-let g:go_highlight_extra_types            = 1
-let g:go_highlight_fields                 = 1
-let g:go_highlight_format_strings         = 1
-let g:go_highlight_function_calls         = 1
-let g:go_highlight_function_parameters    = 1
-let g:go_highlight_functions              = 1
-let g:go_highlight_generate_tags          = 1
-let g:go_highlight_operators              = 1
-let g:go_highlight_space_tab_error        = 1
-let g:go_highlight_string_spellcheck      = 1
-let g:go_highlight_types                  = 1
-let g:go_highlight_variable_assignments   = 1
-let g:go_highlight_variable_declarations  = 1
-
-" Javascript Highlighting
-exe 'hi jsBuiltins guifg='s:builtin
-exe 'hi jsFunction guifg='s:keyword' gui=bold'
-exe 'hi jsGlobalObjects guifg='s:type
-exe 'hi jsAssignmentExps guifg='s:var
-
-" Html Highlighting
-exe 'hi htmlLink guifg='s:var' gui=underline'
-exe 'hi htmlStatement guifg='s:keyword
-exe 'hi htmlSpecialTagName guifg='s:keyword
-
-" Markdown Highlighting
-exe 'hi mkdCode guifg='s:builtin
-
-
+if exists("g:flowtune_transparent_bg")
+  if g:flowtune_transparent_bg==1
+    highlight Normal     ctermbg=NONE guibg=NONE
+    highlight LineNr     ctermbg=NONE guibg=NONE
+    highlight VertSplit ctermbg=NONE guibg=NONE
+    highlight EndOfBuffer ctermbg=NONE guibg=NONE
+  endif
+endif
