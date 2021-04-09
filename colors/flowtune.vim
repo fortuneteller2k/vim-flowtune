@@ -26,7 +26,7 @@ hi! CursorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#2f2f2f
 hi! CursorLine cterm=NONE gui=NONE ctermbg=235 guibg=#2f2f2f
 hi! Comment cterm=italic gui=italic ctermfg=242 guifg=#343434
 hi! Constant cterm=NONE gui=NONE ctermfg=209 guifg=#e97b16
-hi! Cursor cterm=NONE gui=NONE ctermbg=242 ctermfg=242 guibg=#6c6f93 guifg=#6c6f93
+hi! Cursor cterm=NONE gui=NONE ctermbg=242 ctermfg=242 guibg=#2d2d2d guifg=#2d2d2d
 hi! CursorLineNr cterm=NONE gui=NONE ctermbg=235 ctermfg=251 guibg=#2a3158 guifg=#cdd1e6
 hi! Delimiter cterm=NONE gui=NONE ctermfg=44 guifg=#48a0fc
 hi! DiffAdd cterm=NONE gui=NONE ctermbg=238 ctermfg=7 guibg=#45493e guifg=#c0c5b9
@@ -40,13 +40,13 @@ hi! WarningMsg cterm=NONE gui=NONE ctermbg=233 ctermfg=203 guibg=#101010 guifg=#
 hi! EndOfBuffer cterm=NONE gui=NONE ctermbg=233 ctermfg=236 guibg=#101010 guifg=#2f2f2f
 hi! NonText cterm=NONE gui=NONE ctermbg=233 ctermfg=233 guifg=#2f2f2f guibg=#101010
 hi! SpecialKey cterm=NONE gui=NONE ctermbg=203 ctermfg=235 guibg=#e95678 guifg=#2f2f2f
-hi! Folded cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#101010 guifg=#6c6f93
-hi! FoldColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#101010 guifg=#6c6f93
+hi! Folded cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#101010 guifg=#2d2d2d
+hi! FoldColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#101010 guifg=#2d2d2d
 hi! Function cterm=NONE gui=NONE ctermfg=37 guifg=#2f93fc
 hi! Identifier cterm=italic gui=italic ctermfg=203 guifg=#e95678
 hi! Statement cterm=bold gui=bold ctermfg=171 guifg=#e454f1
 hi! Include cterm=NONE gui=NONE ctermfg=171 guifg=#e454f1
-hi! LineNr cterm=NONE gui=NONE ctermbg=233 ctermfg=239 guibg=#101010 guifg=#6c6f93
+hi! LineNr cterm=NONE gui=NONE ctermbg=233 ctermfg=239 guibg=#101010 guifg=#2d2d2d
 hi! MatchParen cterm=NONE gui=NONE ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg cterm=NONE gui=NONE ctermfg=48 guifg=#3cef85
 hi! Normal cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guibg=#101010 guifg=#f1f6fb
@@ -59,7 +59,7 @@ hi! PreProc cterm=NONE gui=NONE ctermfg=150 guifg=#3cef85
 hi! Question cterm=NONE gui=NONE ctermfg=150 guifg=#3cef85
 hi! QuickFixLine cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guibg=#272c42 guifg=#101010
 hi! Search cterm=NONE gui=NONE ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
-hi! SignColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#101010 guifg=#6c6f93
+hi! SignColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#101010 guifg=#2d2d2d
 hi! Special cterm=NONE gui=NONE ctermfg=203 guifg=#e95678
 hi! SpellBad cterm=undercurl gui=undercurl ctermbg=95 ctermfg=252 guisp=#ec456b
 hi! SpellCap cterm=undercurl gui=undercurl ctermbg=24 ctermfg=252 guisp=#2f93fc
