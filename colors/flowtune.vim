@@ -24,7 +24,7 @@ let g:colors_name = 'flowtune'
 hi! ColorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#2f2f2f
 hi! CursorColumn cterm=NONE gui=NONE ctermbg=235 guibg=#2f2f2f
 hi! CursorLine cterm=NONE gui=NONE ctermbg=235 guibg=#2f2f2f
-hi! Comment cterm=italic gui=italic ctermfg=242 guifg=#3f3f3f
+hi! Comment cterm=italic gui=italic ctermfg=242 guifg=#505050
 hi! Constant cterm=NONE gui=NONE ctermfg=209 guifg=#e97b16
 hi! Cursor cterm=NONE gui=NONE ctermbg=242 ctermfg=242 guibg=#2d2d2d guifg=#2d2d2d
 hi! CursorLineNr cterm=NONE gui=NONE ctermbg=235 ctermfg=251 guibg=#2a3158 guifg=#cdd1e6
