@@ -1,5 +1,5 @@
-let s:gray1 = [ '#2c2c2c', 235 ]
-let s:gray2 = [ '#1c1c1c', 233 ]
+let s:gray1 = [ '#323232', 235 ]
+let s:gray2 = [ '#252525', 233 ]
 let s:white = [ '#f1f6fb', 242 ]
 let s:cyan = [ '#40c9f2', 37 ]
 let s:green = [ '#3cef85', 48 ]
