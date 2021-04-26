@@ -44,8 +44,8 @@ hi! Folded cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#151515 guifg=#2d2d
 hi! FoldColumn cterm=NONE gui=NONE ctermbg=233 ctermfg=242 guibg=#151515 guifg=#2d2d2d
 hi! Function cterm=NONE gui=NONE ctermfg=37 guifg=#2f93fc
 hi! Identifier cterm=italic gui=italic ctermfg=203 guifg=#e95678
-hi! Statement cterm=bold gui=bold ctermfg=171 guifg=#e454f1
-hi! Include cterm=NONE gui=NONE ctermfg=171 guifg=#e454f1
+hi! Statement cterm=bold gui=bold ctermfg=171 guifg=#c344ed
+hi! Include cterm=NONE gui=NONE ctermfg=171 guifg=#c344ed
 hi! LineNr cterm=NONE gui=NONE ctermbg=233 ctermfg=239 guibg=#151515 guifg=#2d2d2d
 hi! MatchParen cterm=NONE gui=NONE ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg cterm=NONE gui=NONE ctermfg=48 guifg=#3cef85
@@ -217,11 +217,11 @@ if has('nvim')
   let g:terminal_color_9 = '#40c9f2'
   let g:terminal_color_10 = '#fcd761'
   let g:terminal_color_11 = '#48a0fc'
-  let g:terminal_color_12 = '#e454f1'
+  let g:terminal_color_12 = '#c344ed'
   let g:terminal_color_13 = '#95c4ce'
   let g:terminal_color_14 = '#f6f9fd'
 else
-  let g:terminal_ansi_colors = ['#151515', '#ec456b', '#3cef85', '#fcd148', '#2f93fc', '#eb882d', '#e95678', '#151515', '#f1f6fb', '#40c9f2', '#fcd761', '#48a0fc', '#e454f1', '#95c4ce', '#f6f9fd']
+  let g:terminal_ansi_colors = ['#151515', '#ec456b', '#3cef85', '#fcd148', '#2f93fc', '#eb882d', '#e95678', '#151515', '#f1f6fb', '#40c9f2', '#fcd761', '#48a0fc', '#c344ed', '#95c4ce', '#f6f9fd']
 endif
 
 if exists("g:flowtune_transparent_bg")
